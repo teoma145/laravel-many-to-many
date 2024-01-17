@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use App\Models\Type;
+use App\Models\Technology;
 
 class ProjectController extends Controller
 {
@@ -28,7 +29,8 @@ class ProjectController extends Controller
     public function create(project $project)
     {
         $types = Type::all();
-        return view('admin.project.create',compact('project','types'));
+        $technologies = Technology::all();
+        return view('admin.project.create',compact('project','types','technologies'));
     }
 
     /**

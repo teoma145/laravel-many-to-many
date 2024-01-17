@@ -5,6 +5,8 @@
         <a href="{{ route('admin.projects.index') }}">vai</a>
         <h1>types</h1>
         <a href="{{ route('admin.types.index') }}">vai</a>
+        <h1>technologies</h1>
+        <a href="{{ route('admin.technologies.index') }}">vai</a>
     </section>
 @endsection
 

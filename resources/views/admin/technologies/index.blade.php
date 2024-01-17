@@ -23,10 +23,10 @@
         <tbody>
         @foreach($technologies as $technology)
                 <tr>
-                    <th scope="row">{{$type->slug}}</th>
+                    <th scope="row">{{$technology->slug}}</th>
                     <td><a href="{{route('admin.technologies.show', $technology->slug)}}" title="View type">{{$technology->name}}</a></td>
 
-                    <td><a class="link-secondary" href="{{route('admin.technologies.edit', $type->slug)}}" title="Edit technology"><i class="fa-solslug fa-pen"></i></a></td>
+                    <td><a class="link-secondary" href="{{route('admin.technologies.edit', $technology->slug)}}" title="Edit technology"><i class="fa-solslug fa-pen"></i></a></td>
                     <td>
                         <form action="{{route('admin.technologies.destroy', $technology->slug)}}" method="POST">
                         @csrf
