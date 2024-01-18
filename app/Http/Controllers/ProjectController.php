@@ -49,7 +49,11 @@ class ProjectController extends Controller
 
 
         }
+
         $newProject = Project::create($formData);
+        if($request->has('technologies')){
+            $newProject->technologies()->attach($request['technologies']);
+        }
         return to_route('admin.projects.show',$newProject->slug);
 
     }
